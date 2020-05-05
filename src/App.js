@@ -15,7 +15,7 @@ const App = () => {
 image: "https://deckofcardsapi.com/static/img/JS.png",
 });
   const handleGetCard = () => {
-    Axios.get("https://deckofcardsapi.com/api/deck/"+deckId+"/draw/?count=10")
+    Axios.get("https://deckofcardsapi.com/api/deck/"+deckId+"/draw/?count=1")
     .then(resp => {
       setCard(resp.data.cards[0])
       console.log(resp.data.cards[0])
