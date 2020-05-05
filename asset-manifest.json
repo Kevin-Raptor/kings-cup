@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kings-cup/static/css/main.d1b05096.chunk.css",
-    "main.js": "/kings-cup/static/js/main.112d648d.chunk.js",
-    "main.js.map": "/kings-cup/static/js/main.112d648d.chunk.js.map",
+    "main.js": "/kings-cup/static/js/main.e687db2c.chunk.js",
+    "main.js.map": "/kings-cup/static/js/main.e687db2c.chunk.js.map",
     "runtime-main.js": "/kings-cup/static/js/runtime-main.2f473da3.js",
     "runtime-main.js.map": "/kings-cup/static/js/runtime-main.2f473da3.js.map",
     "static/js/2.fe9ea18a.chunk.js": "/kings-cup/static/js/2.fe9ea18a.chunk.js",
     "static/js/2.fe9ea18a.chunk.js.map": "/kings-cup/static/js/2.fe9ea18a.chunk.js.map",
     "index.html": "/kings-cup/index.html",
-    "precache-manifest.b317b4bad5ffbb79d95b08fbf7626ade.js": "/kings-cup/precache-manifest.b317b4bad5ffbb79d95b08fbf7626ade.js",
+    "precache-manifest.a6b01d19713ea1a31484ff49447dc1db.js": "/kings-cup/precache-manifest.a6b01d19713ea1a31484ff49447dc1db.js",
     "service-worker.js": "/kings-cup/service-worker.js",
     "static/css/main.d1b05096.chunk.css.map": "/kings-cup/static/css/main.d1b05096.chunk.css.map",
     "static/js/2.fe9ea18a.chunk.js.LICENSE.txt": "/kings-cup/static/js/2.fe9ea18a.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2f473da3.js",
     "static/js/2.fe9ea18a.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.112d648d.chunk.js"
+    "static/js/main.e687db2c.chunk.js"
   ]
 }

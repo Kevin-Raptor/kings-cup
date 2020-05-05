@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kings-cup/precache-manifest.b317b4bad5ffbb79d95b08fbf7626ade.js"
+  "/kings-cup/precache-manifest.a6b01d19713ea1a31484ff49447dc1db.js"
 );
 
 self.addEventListener('message', (event) => {
