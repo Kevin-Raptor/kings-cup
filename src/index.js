@@ -18,7 +18,7 @@ const theme = createMuiTheme({
       dark: '#cfcfcf  ',
       contrastText: '#000000'
     }
-  }
+  },
 })
 
 ReactDOM.render(
