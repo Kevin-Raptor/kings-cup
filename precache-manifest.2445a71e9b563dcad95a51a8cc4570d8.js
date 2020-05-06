@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "03d368ce9e29e5b3fa5403b2595b1f21",
+    "revision": "76e3676b3b3074ef34fa78cddbd0a05b",
     "url": "/kings-cup/index.html"
   },
   {
-    "revision": "8f94a68cb6ed911b1fe7",
+    "revision": "e4f3792b8aeb193944ca",
     "url": "/kings-cup/static/css/main.d1b05096.chunk.css"
   },
   {
-    "revision": "c3925cc5b409e7dfcd80",
-    "url": "/kings-cup/static/js/2.1b4465d6.chunk.js"
+    "revision": "84389e0b68a18ad499a5",
+    "url": "/kings-cup/static/js/2.aecb0d79.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/kings-cup/static/js/2.1b4465d6.chunk.js.LICENSE.txt"
+    "url": "/kings-cup/static/js/2.aecb0d79.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8f94a68cb6ed911b1fe7",
-    "url": "/kings-cup/static/js/main.17b0b23d.chunk.js"
+    "revision": "e4f3792b8aeb193944ca",
+    "url": "/kings-cup/static/js/main.57be4a01.chunk.js"
   },
   {
     "revision": "90ec753df82c7b667f0d",
