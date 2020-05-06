@@ -11,6 +11,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 import Table from '@material-ui/core/Table';
@@ -22,6 +23,7 @@ import TableRow from '@material-ui/core/TableRow';
 const useStyles = makeStyles((theme) => ({
     cardsRemainingText: {
       textAlign:'center',
+      marginRight:'10px',
       [theme.breakpoints.down("sm")]: {
         fontSize: 30
       }
@@ -93,8 +95,9 @@ const StyledTableCell = withStyles((theme) => ({
     color: theme.palette.common.white,
   },
   body: {
-    fontSize: 15,
-    fontWeight:600
+    fontSize: 18,
+    fontWeight:600,
+    height:'2px'
   },
 }))(TableCell);
 
@@ -114,6 +117,8 @@ const App = () => {
   const [deckId,setDeckId] = useState("cqif69lwm9tz")
   const [card,setCard] = useState({});
   const [cardsRemaining,setCardsRemaining] = useState(0)
+  const [loadingData,setLoadingData]= useState(false)
+  const [loadingDataText,setLoadingDataText]= useState("")
 
   const rules = [
     { card:"King" , title:"pending", rule:"pending" }, 
@@ -132,23 +137,38 @@ const App = () => {
   ]
 
   const handleGetCard = () => {
+    setLoadingData(true);
+    setLoadingDataText("Picking a card...")
+
     Axios.get("https://deckofcardsapi.com/api/deck/"+deckId+"/draw/?count=1")
     .then(resp => {
-      if(!resp.success){
-        
-        setCard(resp.data.cards[0])
-        console.log(resp)
-        setCardsRemaining(resp.data.remaining)
-      }
+        if(resp.data.success){
+          
+          setCard(resp.data.cards[0])
+          setCardsRemaining(resp.data.remaining)
+        }else{
+          alert("Shuffle the Cards U Fool!!")
+        }
+
+        setLoadingData(false);
+        setLoadingDataText("")
     })
     .catch((error)=>console.log(error))
   }
+
   const handleShuffle = () => {
+    
+    setLoadingData(true);
+    setLoadingDataText("Shuffling the deck...")
+
     Axios.get("https://deckofcardsapi.com/api/deck/"+deckId+"/shuffle/")
     .then(resp => {
       console.log(resp);
       setCardsRemaining(52)
       setCard({})
+      setLoadingData(false);
+      setLoadingDataText("")
+  
     })
     .catch((error)=>console.log(error))
 
@@ -180,6 +200,25 @@ const App = () => {
         </DialogContent>
 
       </Dialog>
+     
+      <Dialog
+        open={loadingData}
+        onClose={handleCloseGeneDialog}>
+        <DialogContent>
+          <Grid container   
+            direction="row"
+            justify="space-around"
+            alignItems="center">
+          <Typography variant="h3" className={classes.cardsRemainingText}>{loadingDataText}</Typography>
+          <CircularProgress />
+          </Grid>
+
+        </DialogContent>
+
+      </Dialog>
+
+
+
       <AppBar position="static">
       <Toolbar>
         <Typography variant="h5" className={classes.title}>
@@ -204,7 +243,7 @@ const App = () => {
               <Button color="primary" variant="contained" size="large" className={classes.button}  onClick={handleShuffle} fullWidth>Shuffle Deck</Button>
             </Grid>
             <Grid item xs={12} sm={12} md={6} lg={6}>
-              <Button color="primary" variant="outlined" size="large" className={classes.button}  onClick={handleGetCard} disabled={cardsRemaining===0} fullWidth>Next Card</Button>
+              <Button color="primary" variant="outlined" size="large" className={classes.button}  onClick={handleGetCard}  fullWidth>Next Card</Button>
             </Grid>
           </Grid>      
         </Card>
