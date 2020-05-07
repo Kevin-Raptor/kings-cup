@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2bbb77071bc5c414a6751f489f067bf2",
+    "revision": "b7597b6a5ef6dd4d19c17594f8559532",
     "url": "/kings-cup/index.html"
   },
   {
-    "revision": "107fc774db7261fd32cc",
+    "revision": "09165ff652ca58d31303",
     "url": "/kings-cup/static/css/main.d1b05096.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kings-cup/static/js/2.80906dd7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "107fc774db7261fd32cc",
-    "url": "/kings-cup/static/js/main.372ee372.chunk.js"
+    "revision": "09165ff652ca58d31303",
+    "url": "/kings-cup/static/js/main.61dee72d.chunk.js"
   },
   {
     "revision": "90ec753df82c7b667f0d",
